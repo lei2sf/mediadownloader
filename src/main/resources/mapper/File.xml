@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yang.downloader.dao.FileDao">
+    <insert id="save" parameterType="com.yang.downloader.domain.entity.File">
+        insert into file (
+        id
+        , spider_id
+        , file_name
+        , file_suffix
+        , file_type
+        , file_path
+        , create_id
+        , create_time
+        , update_id
+        , update_time
+        , delete_flag)
+        values (
+        #{id}
+        , #{spiderId}
+        , #{fileName}
+        , #{fileSuffix}
+        , #{fileType}
+        , #{filePath}
+        , #{createId}
+        , #{createTime}
+        , #{updateId}
+        , #{updateTime}
+        , #{deleteFlag}
+        )
+    </insert>
+</mapper>
